@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://wadeable:<Password>@cluster0.lzpsx.mongodb.net/todolistDB", {
+mongoose.connect("mongodb+srv://wadeable:Test123@cluster0.lzpsx.mongodb.net/todolistDB", {
   useNewUrlParser: true
 });
 
@@ -149,8 +149,6 @@ let port = process.env.PORT;
 if (port == null || port == "") {
   port = 3000;
 }
-app.listen(port);
-
 app.listen(port, function() {
   console.log("Server has started successfully.");
 });
